@@ -1,0 +1,70 @@
+// Flexbox
+@mixin flexbox(
+  $flex-direction: false,
+  $flex-wrap: false,
+  $justify-content: false,
+  $align-items: false,
+  $flex: false
+) {
+  display: flex;
+  @if $flex-direction != false {
+    flex-direction: $flex-direction;
+  }
+  @if $flex-wrap != false {
+    flex-wrap: $flex-wrap;
+  }
+  @if $justify-content != false {
+    justify-content: $justify-content;
+  }
+  @if $align-items != false {
+    align-items: $align-items;
+  }
+  @if $flex != false {
+    flex: $flex;
+  }
+}
+
+// Placeholders in HTML5 forms
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+// Visually hiding labels
+@mixin hide-label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+// Media Queries
+@mixin tablet {
+  @media only screen and (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media only screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+@mixin large-desktop {
+  @media only screen and (min-width: #{$large-desktop-width}) {
+    @content;
+  }
+}

@@ -1,0 +1,55 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  thead {
+    background-color: $lightblue;
+    tr {
+      border: 1px solid $gray;
+      .first-header {
+        @include flexbox($align-items: center);
+        width: 100%;
+        select {
+          margin-left: 0.4rem;
+          border: none;
+          border-radius: 3px;
+          background-color: $lightgray;
+          width: 2.2rem;
+          @include desktop {
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+      .second-header {
+        width: 20%;
+      }
+      .third-header {
+        width: 60%;
+      }
+      th {
+        text-align: left;
+        padding: 0.5rem;
+        margin: 0;
+      }
+    }
+  }
+  tbody {
+    tr {
+      border-right: 1px solid $gray;
+      border-left: 1px solid $gray;
+      td {
+        padding: 0.3rem 0 0.3rem 0.5rem;
+      }
+    }
+  }
+  tr:nth-child(even) td {
+    background-color: $tablegray;
+  }
+  tr:nth-child(odd) td {
+    background-color: $white;
+  }
+  tr:last-child td {
+    border-bottom: 1px solid $gray;
+  }
+}

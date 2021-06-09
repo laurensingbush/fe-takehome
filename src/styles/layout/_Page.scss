@@ -1,0 +1,14 @@
+.App {
+  @include flexbox($justify-content: center, $flex-direction: column);
+  width: 90%;
+  margin: auto;
+  @include tablet {
+    width: 80%;
+  }
+  @include desktop {
+    width: 50%;
+  }
+  form {
+    margin: 1rem 0 0.5rem auto;
+  }
+}

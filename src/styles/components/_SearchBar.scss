@@ -1,0 +1,29 @@
+form {
+  .search-container {
+    @include flexbox($align-items: center);
+    position: relative;
+    input {
+      font-size: 1rem;
+      padding: 0.3rem 1.5rem;
+      border: 1px solid $gray;
+      border-radius: 3px;
+      @include placeholder {
+        color: $gray;
+      }
+      @include desktop {
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .search-icon {
+      font-size: 1rem;
+      position: absolute;
+      left: 2%;
+      color: $gray;
+      @include tablet {
+        font-size: 1rem;
+      }
+    }
+  }
+}
